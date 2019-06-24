@@ -28,7 +28,7 @@ public class DeepCopy implements Cloneable{
 
     @Override
     public String toString() {
-        return "ShallowCopy{" +
+        return "DeepCopy{" +
                 "arrayList=" + arrayList +
                 '}';
     }
