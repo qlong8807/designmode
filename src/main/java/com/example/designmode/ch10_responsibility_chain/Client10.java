@@ -7,11 +7,11 @@ public class Client10 {
     public static void main(String[] args) {
 //随机挑选几个女性
         Random rand = new Random();
-        ArrayList<IWomen> arrayList = new ArrayList();
+        ArrayList<IWomen> womens = new ArrayList();
         for (int i = 0; i < 5; i++) {
-            arrayList.add(new Women(rand.nextInt(4), "我要出去逛街"));
+            womens.add(new Women(rand.nextInt(4), "我要出去逛街"));
         }
-        System.err.println(arrayList.toString());
+        System.err.println(womens.toString());
         //定义三个请示对象
         Handler father = new Father();
         Handler husband = new Husband();
@@ -19,7 +19,7 @@ public class Client10 {
 //设置请示顺序
         father.setNext(husband);
         husband.setNext(son);
-        for (IWomen women : arrayList) {
+        for (IWomen women : womens) {
             father.HandleMessage(women);
         }
     }
