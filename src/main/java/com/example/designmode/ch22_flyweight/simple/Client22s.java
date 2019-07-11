@@ -8,7 +8,6 @@ public class Client22s {
 
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         FlyweightFactory factory = new FlyweightFactory();
         Flyweight fly = factory.factory(new Character('a'));
         fly.operation("First Call");
